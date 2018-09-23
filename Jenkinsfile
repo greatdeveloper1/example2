@@ -3,7 +3,7 @@ pipeline{
 	agent any	
 	
 	environment {
-    PATH = '"C:\\Program Files\\Docker Toolbox:$PATH"'
+    PATH = '"C:\\Program Files\\Docker Toolbox:${env.PATH}"'
     }
 	stages{
 	
