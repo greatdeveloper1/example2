@@ -1,6 +1,10 @@
 pipeline{
 
 	agent any	
+	
+	environment {
+    PATH = '"C:\\Program Files\\Docker Toolbox":$PATH'
+    }
 	stages{
 	
 		stage('me Building docker image'){
