@@ -1,9 +1,15 @@
 pipeline{
 
-	agent any	
+	agent any
+
+	parameters{
+	
+	string(name: 'dockerPath', defaultValue: '"C:\\Program Files\\Docker Toolbox"', description: '')
+
+	}	
 	
 	environment {
-    PATH = '"C:\\Program Files\\Docker Toolbox:${env.PATH}"'
+    PATH = "${dockerPath}:${env.PATH}"
     }
 	stages{
 	
