@@ -10,7 +10,7 @@ pipeline{
 		stage('me Building docker image'){
 			
 			steps{
-				echo $path
+				echo PATH
 				echo 'clean and package....'
 				bat 'mvn clean package'
 				bat "docker build -t tomcatwebapp:${env.BUILD_ID} ."
