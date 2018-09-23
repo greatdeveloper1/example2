@@ -8,19 +8,21 @@ pipeline{
 
 	}	
 	
-	environment {
+	/*environment {
     PATH = "${dockerPath}:${env.PATH}"
     }
+	*/
+	
 	stages{
 	
 		stage('me Building docker image'){
 			
 			steps{
 			
-				
+				echo env.PATH
 				echo 'clean and package....'
 				bat 'mvn clean package'
-				bat ' start cmd.exe /k " docker build -t tomcatwebapp:${env.BUILD_ID} . " '
+				bat '" docker build -t tomcatwebapp:${env.BUILD_ID} . "'
 			
 			}
 			post{
