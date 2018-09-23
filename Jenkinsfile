@@ -17,7 +17,7 @@ pipeline{
 			
 			steps{
 			
-				echo env
+				
 				echo 'clean and package....'
 				bat 'mvn clean package'
 				bat ' start cmd.exe /k "docker build -t tomcatwebapp:${env.BUILD_ID}" .'
