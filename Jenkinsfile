@@ -4,7 +4,7 @@ pipeline{
 
 	parameters{
 	
-	string(name: 'dockerPath', defaultValue: '"C:\\Program Files\\Docker Toolbox"', description: '')
+	string(name: 'dockerPath', defaultValue: '"C:\\Program Files\\Docker Toolbox\\docker-machine.exe"', description: '')
 
 	}	
 	
